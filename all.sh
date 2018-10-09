@@ -2,7 +2,7 @@
 git clone https://github.com/tensorflow/tensorflow.git -b r1.9
 cd tensorflow && ./configure && bazel build --config=mkl --copt="-DEIGEN_USE_VML" -c opt //tensorflow/tools/pip_package:build_pip_package
 
-# Patch and rebuild with MKL
+# Patch
 unalias cp
 cd ..
 cp fft_ops.cc tensorflow/tensorflow/core/kernels/fft_ops.cc
